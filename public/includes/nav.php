@@ -22,7 +22,7 @@
               <i class="bi bi-geo-alt"></i> Find Food
             </a>
 
-            <a class="nav-link donate" aria-current="page" href="./../donate.php">
+            <a class="nav-link donate" aria-current="page" href="./donate.php">
               <i class="bi bi-heart"></i> Donate
             </a>
           </li>
