@@ -1,0 +1,43 @@
+nav ul li a {
+    color: #fff;
+    text-transform: uppercase;
+    padding: 8px 25px !important;
+    font-weight: 600 !important;
+    border-radius: 100px;
+    transition: all .3s ease;
+}
+
+nav ul li a.find-food {
+    color: #fff;
+    background: #f3b129;
+    margin: 0 1em;
+}
+
+nav ul li a.donate {
+    color: #fff;
+    background-color: #a8c257;
+}
+
+nav ul li a.find-food:hover {
+    color: #fff;
+    background: #e6a21a;
+}
+
+nav ul li a.donate:hover {
+    color: #fff;
+    background-color: #8cad27;
+}
+
+@media (max-width: 768px) {
+    nav ul li a.find-food {
+        color: #0000008c;
+        background: transparent;
+        margin: 0;
+    }
+    
+    nav ul li a.donate {
+        color: #0000008c;
+        background: transparent;
+    }
+    
+}
