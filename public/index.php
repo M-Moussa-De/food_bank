@@ -32,17 +32,17 @@
         <div class="little-facts">
             <div class="row">
                 <div class="col">
-                    <img src="./assets/imgs/waste_food2.png" alt="waste food statistics" width="120">
+                    <img src="./assets/imgs/waste_food2.png" alt="waste food statistics" width="180">
                     <p class="fact-details">1/3 of Food Is Lost or Wasted</span>
                 </div>
 
                 <div class="col">
-                    <img class="rounded-circle" src="./assets/imgs/poverty.png" alt="waste food statistics" width="130" height="130">
+                    <img class="rounded-circle" src="./assets/imgs/poverty.png" alt="waste food statistics" width="180" height="180">
                     <p class="fact-details">32.5% of Egyptians live on poverty</span>
                 </div>
 
                 <div class="col">
-                    <img class="rounded-circle" src="./assets/imgs/malnutration.png" alt="waste food statistics" width="130" height="130">
+                    <img class="rounded-circle" src="./assets/imgs/malnutration.png" alt="waste food statistics" width="180" height="180">
                     <p class="fact-details">around 21.4% of suffer from malnutrition</span>
                 </div>
             </div>
