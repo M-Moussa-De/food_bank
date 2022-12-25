@@ -18,7 +18,7 @@
           </li>
 
           <li class="nav-item d-lg-flex align-items-center">
-            <a class="nav-link find-food" aria-current="page" href="#">
+            <a class="nav-link find-food" aria-current="page" href="./products.php">
               <i class="bi bi-geo-alt"></i> Find Food
             </a>
 
