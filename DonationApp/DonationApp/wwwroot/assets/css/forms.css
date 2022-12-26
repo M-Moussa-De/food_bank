@@ -1,0 +1,51 @@
+body:has(> #register),
+body:has(> #login) {
+  overflow: hidden;
+}
+
+#register,
+#login {
+  position: relative;
+  height: 92.6vh;
+}
+
+#register .container h1,
+#login .container h1 {
+  font-size: 1.3rem;
+  color: rgba(0 0 0 /0.7);
+  text-align: center;
+}
+
+#register .container,
+#login .container {
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -20%);
+}
+
+@media (min-width: 768px) {
+  #register .container,
+  #login .container {
+    max-width: 30rem;
+  }
+}
+
+#register .container form,
+#login .container form {
+  padding: 1rem;
+  background: #eeeeee61;
+  border-radius: 0.4rem;
+}
+
+#register .container form h1,
+#register .container form label,
+#login .container form h1,
+#login .container form label {
+  color: #6c757d;
+}
+
+#register .container form span.text-danger,
+#login .container form span.text-danger {
+  font-size: 14px;
+}

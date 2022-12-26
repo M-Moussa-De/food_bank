@@ -1,0 +1,193 @@
+﻿@{ ViewData["Title"] = "Home Page"; }
+
+
+<!-- Our  mission -->
+<section id="mission">
+    <div class="container">
+
+        <div class="missson-text">
+            <h4 class="header text-center">Why are we here?</h4>
+            <p class="header-text">
+                Every day delicious, fresh food goes to waste in supermarkets, cafeterias, restaurants, hotels,
+                stores and manufacturers, simply because it has not been sold in time.
+            </p>
+        </div>
+
+        <div class="little-facts">
+            <div class="row">
+                <div class="col">
+                    <img src="/assets/imgs/waste_food2.png" alt="waste food statistics" width="180">
+                    <p class="fact-details">1/3 of Food Is Lost or Wasted</p>
+                </div>
+
+                <div class="col">
+                    <img class="rounded-circle" src="/assets/imgs/poverty.png" alt="waste food statistics" width="180" height="180">
+                    <p class="fact-details">32.5% of Egyptians live on poverty</p>
+                </div>
+
+                <div class="col">
+                    <img class="rounded-circle" src="/assets/imgs/malnutration.png" alt="waste food statistics" width="180" height="180">
+                    <p class="fact-details">around 21.4% of suffer from malnutrition</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!-- Facts -->
+<session id="wedone">
+    <div class="wrapper">
+
+        <div class="row">
+            <div class="col">
+                <img src="/assets/imgs/fact1.png" alt="">
+                <h4>102546</h4>
+                <h5>Kilos food delivered</h5>
+            </div>
+            <div class="col">
+                <img src="/assets/imgs/fact2.png" alt="">
+                <h4>254054</h4>
+                <h5>Plates of food delivered</h5>
+            </div>
+            <div class="col">
+                <img src="./assets/imgs/fact3.png" alt="">
+                <h4>3541</h4>
+                <h5>Recycled waste</h5>
+            </div>
+            <div class="col">
+                <img src="/assets/imgs/fact4.png" alt="">
+                <h4>35451</h4>
+                <h5>People served</h5>
+            </div>
+            <div class="col">
+                <img src="/assets/imgs/fact5.png" alt="">
+                <h4>35451</h4>
+                <h5>Benefit organizations</h5>
+            </div>
+            <div class="col">
+                <img src="/assets/imgs/fact6.png" alt="">
+                <h4>35451</h4>
+                <h5>People served</h5>
+            </div>
+
+        </div>
+
+    </div>
+</session>
+
+<!-- Available donations in your area -->
+<session id="wedone">
+    <div class="container">
+        <h5 class="header text-center">Available donations in your area</h5>
+        <div id="map" style="display:block; height:500px"></div>
+    </div>
+</session>
+
+<!-- Signup -->
+<session id="signup">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <h2>DO YOU HAVE A BUSINESS WITH SURPLUS FOOD?</h2>
+                <h4>BE PART OF THE SOLUTION</h4>
+                <h5>Too Good To Go can help you cut food waste - all while finding new customers and winning back sunk costs.</h5>
+                <a class="btn">Sign up your business</a>
+            </div>
+            <div class="col">
+                <img class="rounded" src="/assets/imgs/hero.jpg" alt="" height="350" style="object-fit: cover;">
+            </div>
+        </div>
+    </div>
+</session>
+
+
+<!-- Async script executes immediately and must be after any DOM elements used in callback. -->
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDpfS1oRGreGSBU5HHjMmQ3o5NLw7VdJ6I&callback=initMap"
+        async defer></script>
+
+
+<script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+<script src="/lib/jquery/dist/jquery.js"></script>
+<script>
+    // This example creates a simple polygon representing the Bermuda Triangle.
+    function initMap() {
+        var map = new google.maps.Map(document.getElementById('map'), {
+            zoom: 3,
+            center: new google.maps.LatLng(30.016082069576182, 31.420657941527438),
+            mapTypeId: google.maps.MapTypeId.ROADMAP,
+            provideRouteAlternatives: true,
+            travelMode: 'DRIVING'
+        });
+
+        var markers = new Array();
+        $.ajax({
+
+            url: 'api/DonationsAPI',
+            type: 'GET',
+            dataType: 'json',
+            success: function (data) {
+                var marker, i;
+                //var image = "https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png";
+                var infowindow = new google.maps.InfoWindow();
+                for (i = 0; i < data.length; i++) {
+                    var svgMarker = {
+                        path: "M10.453 14.016l6.563-6.609-1.406-1.406-5.156 5.203-2.063-2.109-1.406 1.406zM12 2.016q2.906 0 4.945 2.039t2.039 4.945q0 1.453-0.727 3.328t-1.758 3.516-2.039 3.070-1.711 2.273l-0.75 0.797q-0.281-0.328-0.75-0.867t-1.688-2.156-2.133-3.141-1.664-3.445-0.75-3.375q0-2.906 2.039-4.945t4.945-2.039z",
+                        fillColor: "green",
+                        fillOpacity: 0.6,
+                        strokeWeight: 0,
+                        rotation: 0,
+                        scale: 2,
+                        anchor: new google.maps.Point(15, 30),
+                    };
+                    if (data[i].status == 2) {
+                        svgMarker = {
+                            path: "M10.453 14.016l6.563-6.609-1.406-1.406-5.156 5.203-2.063-2.109-1.406 1.406zM12 2.016q2.906 0 4.945 2.039t2.039 4.945q0 1.453-0.727 3.328t-1.758 3.516-2.039 3.070-1.711 2.273l-0.75 0.797q-0.281-0.328-0.75-0.867t-1.688-2.156-2.133-3.141-1.664-3.445-0.75-3.375q0-2.906 2.039-4.945t4.945-2.039z",
+                            fillColor: "red",
+                            fillOpacity: 0.6,
+                            strokeWeight: 0,
+                            rotation: 0,
+                            scale: 2,
+                            anchor: new google.maps.Point(15, 30),
+                        };
+                    }
+                    var marker = new google.maps.Marker(
+                        {
+                            position: new google.maps.LatLng(data[i].latitude, data[i].longitude),
+                            map: map,
+                            animation: google.maps.Animation.DROP,
+                            icon: svgMarker
+                        }
+                    );
+
+                    markers.push(marker);
+
+                    google.maps.event.addListener(marker, 'click', (function (marker, i) {
+                        return function () {
+                            infowindow.setContent(data[i].title + " - " + data[i].districtName);
+                            infowindow.open(map, marker);
+                        }
+                    })(marker, i));
+
+                    AutoCenter();
+                }
+            },
+            error: function (request, error) {
+                alert("Request: " + JSON.stringify(request));
+            }
+        });
+
+        function AutoCenter() {
+            var bounds = new google.maps.LatLngBounds();
+            $.each(markers, function (index, marker) {
+                bounds.extend(marker.position);
+            });
+            map.fitBounds(bounds);
+        }
+    }
+
+    $(document).ready(function () {
+
+
+    });
+</script>
