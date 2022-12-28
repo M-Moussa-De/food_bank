@@ -1,6 +1,10 @@
 footer .container {
  border-top: 2px solid var(--color-dark);
  padding: 1.5rem 0;
+ position: absolute;
+ bottom: 0;
+ left: 0;
+ right: 0;
 }
 
 footer .container .row {

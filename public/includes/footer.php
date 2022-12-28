@@ -21,10 +21,10 @@
             </div>
         </div>
 
-    </div>
-    <div class="text-center bg-light mt-2">
-        <span class="m-0 mt-2 copy-rights">Copyright ©2022 Sanad</span>
-        <span class="m-0 copy-rights">All Rights Reserved</span>
+        <div class="text-center bg-light mt-2">
+            <span class="m-0 mt-2 copy-rights">Copyright ©2022 Sanad</span>
+            <span class="m-0 copy-rights">All Rights Reserved</span>
+        </div>
     </div>
 </footer>
 <script src="https://cdn.jsdelivr.net/npm/glider-js@1/glider.min.js"></script>
