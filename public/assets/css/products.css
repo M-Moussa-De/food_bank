@@ -3,6 +3,9 @@
 }
 
 /* Product page */
+#product {
+    min-height: 66vh;
+}
 .row .mini_imgs img {
     width: 100%;
     object-fit: cover;
