@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sanad</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glider-js@1/glider.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="/assets/css/index.css">
+</head>
+
+
+<body>
+    <style>
+        nav {
+            position: relative !important;
+        }
+    </style>
+    <nav class="navbar navbar-expand-lg bg-light fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="/">
+                <img src="/assets/imgs/logo.png" alt="" width="70">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav w-100 d-flex justify-content-end">
+                    <li class="nav-item">
+                        <a class="nav-link about" aria-current="page" href="/about.html">About us</a>
+                    </li>
+                    <li class="nav-item d-lg-flex align-items-center">
+                        <a class="nav-link find-food" aria-current="page" href="/products.html">
+                            <i class="bi bi-geo-alt"></i> Find Food
+                        </a>
+                        <a class="nav-link donate" aria-current="page" href="/donate.html">
+                            <i class="bi bi-heart"></i> Donate
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section id="donate">
+        <div class="container">
+
+
+            <!--<form action="" method="post">-->
+
+            <h3 class="text-center">Donate a Meal/Dish</h3>
+
+            <div class="row">
+
+                <div class="mb-3 col-12 col-md-6">
+                    <label for="dish_name" class="form-label">Dish title</label>
+                    <input type="text" name="dish_name" class="form-control" id="dish_title" placeholder="Enter the dish title">
+                </div>
+
+                <div class="mb-3 col-12 col-md-6">
+                    <label for="dish_description" class="form-label">Dish description</label>
+                    <textarea type="text" name="dish_describtion" class="form-control" id="dish_description" placeholder="Describe your dish..."></textarea>
+                </div>
+
+                <div class="mb-3 col-12 col-md-6">
+                    <label for="dish_enoughfor" class="form-label">Enough for (Persons nr) </label>
+                    <input type="number" name="dish_enoughfor" class="form-control" id="dish_enoughfor" min="1" value="1">
+                </div>
+
+                <div class="mb-3 col-12 col-md-6">
+                    <label for="dish_photos" class="form-label">Dish photos</label>
+                    <input type="file" name="dish_photos" class="form-control" id="dish_photos" multiple />
+                </div>
+
+                <div class="mb-3 col-12 col-md-6">
+                    <label for="dish_date" class="form-label">Dish prepared date</label>
+                    <input type="date" name="dish_date" class="form-control" id="dish_date">
+                </div>
+
+                <div class="mb-3 col-12 col-md-6">
+                    <label for="dish_city" class="form-label">City</label>
+                    <select name="dish_city" class="form-control" id="dish_city">
+                        <option value="0">--Select City--</option>
+                    </select>
+                </div>
+
+                <div class="mb-3 col-12 col-md-6">
+                    <label for="dish_district" class="form-label">District</label>
+                    <select name="dish_district" class="form-control" id="dish_district">
+                        <option value="0">--Select District--</option>
+                    </select>
+                </div>
+
+                <div class="mb-3 col-12 col-md-6">
+                    <label for="dish_address" class="form-label">Meeting Address</label>
+                    <input type="text" name="dish_address" class="form-control" id="dish_address" placeholder="Enter the meeting address...">
+                </div>
+
+                <div class="mb-3 col-12 col-md-12">
+                    <label for="dish_address" class="form-label">Select Meeting Point</label>
+                    <div id="map" style="display:block; height:500px"></div>
+                </div>
+
+                <div class="mb-3 col-12 col-md-12">
+                    <label for="extra_notes" class="form-label">Extra notes</label>
+                    <textarea type="text" name="extra_notes" class="form-control" id="extra_notes" placeholder="Extra notes..."></textarea>
+                </div>
+
+                <div class="mb-3 form-check">
+                    <input type="checkbox" class="form-check-input" id="terms">
+                    <label class="form-check-label" for="terms">The meal was controlled and it's eatable</label>
+                </div>
+
+            </div>
+
+            <button id="Share" type="button" class="btn btn-sm btn-secondary">Share</button>
+
+            <!--</form>-->
+
+
+        </div>
+    </section>
+    <footer class="pt-4">
+        <div class="container">
+
+            <div class="row">
+                <div class="col">
+                    <a class="navbar-brand" href="#">
+                        <img src="/assets/imgs/logo.png" alt="" width="100">
+                    </a>
+                </div>
+
+                <div class="col">
+                    <h6>John Doe 12, 15547 Cairo</h6>
+                    <h6>0123254847</h6>
+                </div>
+
+                <div class="col">
+                    <a href=""><i class="bi bi-facebook"></i></a>
+                    <a href=""><i class="bi bi-instagram"></i></a>
+                    <a href=""><i class="bi bi-twitter"></i></a>
+                    <a href=""><i class="bi bi-youtube"></i></a>
+                </div>
+            </div>
+
+        </div>
+        <div class="text-center bg-light mt-2">
+            <span class="m-0 mt-2 copy-rights">Copyright �2022 Sanad</span>
+            <span class="m-0 copy-rights">All Rights Reserved</span>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/glider-js@1/glider.min.js"></script>
+    <script src="/lib/jquery/dist/jquery.min.js"></script>
+    <script src="/assets/js/bootstarp.bundel.js"></script>
+    <script src="/assets/js/main.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDpfS1oRGreGSBU5HHjMmQ3o5NLw7VdJ6I&callback=initMap" async defer></script>
+
+    <script type="text/javascript">
+        var lat = 0;
+        var lng = 0
+        function initMap() {
+            var map = new google.maps.Map(document.getElementById('map'), {
+                zoom: 20,
+                center: new google.maps.LatLng(30.016082069576182, 31.420657941527438),
+                mapTypeId: google.maps.MapTypeId.ROADMAP,
+                provideRouteAlternatives: true,
+                travelMode: 'DRIVING'
+            });
+            google.maps.event.addListener(map, 'click', function (event) {
+                alert("Latitude: " + event.latLng.lat() + " " + ", longitude: " + event.latLng.lng());
+                lat = event.latLng.lat();
+                lng = event.latLng.lng();
+                var myLatlng = new google.maps.LatLng(event.latLng.lat(), event.latLng.lng());
+                var marker = new google.maps.Marker({
+                    position: myLatlng,
+                    map: map,
+                    title: 'Meeting point here!'
+                });
+            });
+        }
+
+        $(document).ready(function () {
+
+            $.ajax({
+                url: '/api/CityAPI/GetCities',
+                type: 'Get',
+                success: function (res) {
+                    $.each(res, function (data, value) {
+                        $("#dish_city").append($("<option></option>").val(value.id).html(value.name));
+                    })
+                },
+                error: function (res) {
+                    alert("errror");
+                }
+            });
+
+            $('#dish_city').on('change', function () {
+                $.ajax({
+                    url: '/api/DistrictAPI/GetDistricts/?cityId=' + $("#dish_city").val(),
+                    type: 'Get',
+                    success: function (res) {
+                        $('#dish_district').find('option').remove().end().append('<option value="0">--Select District--</option>');
+                        $.each(res, function (data, value) {
+                            $("#dish_district").append($("<option></option>").val(value.id).html(value.name));
+                        })
+                    },
+                    error: function (res) {
+                        alert("errror");
+                    }
+                })
+            });
+
+            $('#Share').click(function () {
+                var formData = new FormData();
+
+                var title = $("#dish_title").val();
+                var description = $("#dish_description").val();
+                var address = $("#dish_address").val();
+                var enoughfor = $("#dish_enoughfor").val();
+                var dishPreparedDate = $("#dish_date").val();
+                var extra_notes = $("#extra_notes").val();
+                var city = $("#dish_city").val();
+                var district = $("#dish_district").val();
+                var dish_photos = $("#dish_photos").prop('files');
+
+                var formData = new FormData();
+
+                for (var i = 0; i != dish_photos.length; i++) {
+                    formData.append("Files", dish_photos[i]);
+                }
+
+                formData.append("Title", title);
+                formData.append("Description", description);
+                formData.append("Address", address);
+                formData.append("EnoughFor", enoughfor);
+                formData.append("PreparedDate", dishPreparedDate);
+                formData.append("ExtraNotes", extra_notes);
+                formData.append("CityId", city);
+                formData.append("DistrictId", district);
+                formData.append("Latitude", lat);
+                formData.append("Longitude", lng);
+
+                $.ajax({
+                    url: '/api/DonationsAPI',
+                    data: formData,
+                    type: 'Post',
+                    processData: false,
+                    contentType: false,
+                    success: function (res) {
+                        alert('success!!');
+                    },
+                    error: function (res) {
+                        alert("error");
+                    }
+                })
+            });
+        });
+    </script>
+</body>
+
+</html>

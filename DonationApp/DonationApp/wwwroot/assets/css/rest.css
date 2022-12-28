@@ -1,0 +1,39 @@
+:root {
+  --color-dark: #114d4d;
+  --color-light: #1ac3af; 
+  --color-main-header: #1b8989;
+  --color-background: #4f80d6;
+}
+
+body {
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+input,
+textarea {
+  border-color: #eee !important;
+}
+
+input:focus,
+textarea:focus {
+  box-shadow: none !important;
+  border-color: rgb(221, 221, 221) !important;
+}
+
+button.navbar-toggler, button.navbar-toggler:focus  {
+  border: none !important;
+  box-shadow: none;
+  padding: 3px;
+  
+}
+
+button.navbar-toggler span {
+  height: 1em;
+  width: 1.2em;
+  margin: 1rem 0;
+}
+
+a {
+  text-decoration: none;
+}

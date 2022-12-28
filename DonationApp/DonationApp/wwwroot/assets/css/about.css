@@ -1,0 +1,54 @@
+#about {
+  padding-top: 3rem;
+}
+
+#about aside ul {
+  list-style: none;
+}
+
+#about h1 {
+  text-transform: capitalize;
+  margin-bottom: 1rem;
+}
+
+#about aside ul li  {
+  margin: 1rem 0;
+}
+
+#about aside ul li a {
+  color: var(--color-main-header);
+}
+
+#about article {
+  margin: 2rem 0;
+}
+
+#about article h3 {
+  color: var(--color-light);
+  text-transform: capitalize;
+}
+
+#about article h2 {
+  font-size: 2.5rem;
+}
+
+#our_staff .row img {
+  width: 180px;
+  height: 180px;
+  object-fit: contain;
+}
+
+/* Sliders */
+#our_partners {
+margin: 3rem 0 !important;
+}
+
+#our_partners h2 {
+  margin-bottom: 2rem;
+}
+
+#our_partners img {
+  height: 70%;
+  width: 70%;
+  object-fit: contain;
+}
