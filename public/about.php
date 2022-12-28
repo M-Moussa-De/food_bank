@@ -55,51 +55,59 @@
 
                     <div class="row">
                         <div class="col-12 col-md-3">
-                            <img src="./assets/imgs/donors/logo2.png" alt="Dr. Tarek Ali">
+                            <img src="./assets/imgs/staff/tarek.png" alt="Dr. Tarek Ali">
                             <strong class="d-block">Dr. Tarek Ali - Supervision</strong>
                             </p>
                         </div>
                     </div>
 
                     <div class="row">
-                        <div class="col-12 col-md-3">
-                            <img src="./assets/imgs/donors/logo3.png" alt="">
-                            <strong class="d-block">Mahmoud - Project owner</strong>
+                        <style>
+                            .col-12.col-md-4 {
+                                display: flex;
+                                flex-direction: column;
+                                align-items: center;
+                                justify-content: center;
+                            }
+                        </style>
+                        <div class="col-12 col-md-4">
+                            <img src="./assets/imgs/staff/mahmoud_abdallah.png" alt="">
+                            <strong class="d-block">Mahmoud AbdAllah - Business owner</strong>
                             </p>
                         </div>
-                        <div class="col-12 col-md-3">
-                            <img src="./assets/imgs/donors/logo4.png" alt="">
-                            <strong class="d-block"> Ali Younes- Supervision</strong>
+                        <div class="col-12 col-md-4">
+                            <img src="./assets/imgs/staff/ali.png" alt="">
+                            <strong class="d-block"> Ali Younes- Product manager</strong>
                             </p>
                         </div>
-                        <div class="col-12 col-md-3">
-                            <img src="./assets/imgs/donors/logo5.png" alt="">
-                            <strong class="d-block"> Waleed - Supervision</strong>
+                        <div class="col-12 col-md-4">
+                            <img src="./assets/imgs/staff/mahmoud_hassanein2.png" alt="">
+                            <strong class="d-block">Mahmoud Hassanein Mahmoud - Full stack</strong>
                             </p>
                         </div>
-                        <div class="col-12 col-md-3">
-                            <img src="./assets/imgs/donors/logo6.png" alt="">
-                            <strong class="d-block"> Marwa - Supervision</strong>
+                        <div class="col-12 col-md-4">
+                            <img src="./assets/imgs/staff/amr.png" alt="">
+                            <strong class="d-block">Amr Ameen AbdElmoneem - Devops</strong>
                             </p>
                         </div>
-                        <div class="col-12 col-md-3">
-                            <img src="./assets/imgs/donors/logo2.png" alt="">
-                            <strong class="d-block"> Mazzen - Supervision</strong>
+                        <div class="col-12 col-md-4">
+                            <img src="./assets/imgs/staff/mazen.png" alt="">
+                            <strong class="d-block">Mazen AbdAllah Farag - .Net Developer</strong>
                             </p>
                         </div>
-                        <div class="col-12 col-md-3">
-                            <img src="./assets/imgs/donors/logo3.png" alt="">
-                            <strong class="d-block"> Mahmoud Moussa- Full stack</strong>
+                        <div class="col-12 col-md-4">
+                            <img src="./assets/imgs/staff/marwa.png" alt="">
+                            <strong class="d-block">Marwa Hashem Ahmed - Frontend developer </strong>
                             </p>
                         </div>
-                        <div class="col-12 col-md-3">
-                            <img src="./assets/imgs/donors/logo4.png" alt="">
-                            <strong class="d-block"> Yasser - Supervision</strong>
+                        <div class="col-12 col-md-4">
+                            <img src="./assets/imgs/staff/yasser.png" alt="">
+                            <strong class="d-block">Yasser Saed Ali AlMagrabe - Database admin</strong>
                             </p>
                         </div>
-                        <div class="col-12 col-md-3">
-                            <img src="./assets/imgs/donors/logo5.png" alt="">
-                            <strong class="d-block"> - Supervision</strong>
+                        <div class="col-12 col-md-4">
+                            <img src="./assets/imgs/staff/walead.png" alt="">
+                            <strong class="d-block">Walead Adel Mohamed - Quality control</strong>
                             </p>
                         </div>
                     </div>
