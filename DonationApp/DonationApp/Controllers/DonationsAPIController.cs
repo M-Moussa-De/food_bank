@@ -67,6 +67,7 @@ namespace DonationApp.Controllers
 
         // GET: api/DonationsAPI/5
         [HttpGet("{id}")]
+        [Route("GetDonation")]
         public async Task<ActionResult<DonationViewModel>> GetDonationViewModel(int id)
         {
             var donation = await _context.Donations.Include("DonationAttachments").Include("User").Include("City").Include("District").FirstOrDefaultAsync(x => x.Id == id);
@@ -127,6 +128,19 @@ namespace DonationApp.Controllers
                     dAttachmentVM.Src = Utilities.Compression.Compress(ms.ToArray());
                 }
                 donationVM.DonationAttachmentViewModels.Add(dAttachmentVM);
+
+                //DonationAttachmentViewModel dAttachmentVM = new DonationAttachmentViewModel();
+                //using (MemoryStream ms = new MemoryStream())
+                //{
+                //    await file.CopyToAsync(ms);
+                //    using (var img = Image.FromStream(ms))
+                //    {
+                //        var res = Utilities.Compression.ResizeImage(img, 526, 400);
+                //        //file.CopyTo(ms);
+                //        dAttachmentVM.Src = Utilities.Compression.Compress(res);
+                //    }
+                //}
+                //donationVM.DonationAttachmentViewModels.Add(dAttachmentVM);
             }
 
             var donation = _mapper.Map<Data.Entities.Donation>(donationVM);
@@ -152,6 +166,28 @@ namespace DonationApp.Controllers
             await _context.SaveChangesAsync();
 
             return _mapper.Map<DonationViewModel>(donation);
+        }
+
+
+        [HttpGet()]
+        [Route("Reserve")]
+        public async Task<ActionResult<string>> Reserve(long id)
+        {
+            var donation = await _context.Donations.FindAsync(id);
+            if (donation == null)
+            {
+                return NotFound();
+            }
+
+            donation.Status = 2;
+
+            _context.Entry(donation).State = EntityState.Modified;
+
+            await _context.SaveChangesAsync();
+            Random rnd = new Random();
+            int generatedCode = rnd.Next();
+
+            return "رقم الحجز  "+generatedCode.ToString() + " برجاء الإحتفاظ به والتوجه الى العنوان لاستلام التبرع";
         }
 
         private bool DonationViewModelExists(int id)

@@ -4,7 +4,7 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
 -->
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
-    <_PublishTargetUrl>C:\Bulid\BugVape</_PublishTargetUrl>
-    <History>True|2022-01-17T19:31:56.1074901Z;False|2022-01-17T21:31:28.2648331+02:00;False|2022-01-17T21:31:11.1861136+02:00;True|2022-01-17T21:23:33.4229924+02:00;</History>
+    <_PublishTargetUrl>C:\Bulid\DonationApp</_PublishTargetUrl>
+    <History>True|2022-12-30T11:03:44.9020924Z;True|2022-01-17T21:31:56.1074901+02:00;False|2022-01-17T21:31:28.2648331+02:00;False|2022-01-17T21:31:11.1861136+02:00;True|2022-01-17T21:23:33.4229924+02:00;</History>
   </PropertyGroup>
 </Project>

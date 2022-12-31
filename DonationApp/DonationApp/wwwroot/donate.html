@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sanad</title>
+    <title>Katar Kherak</title>
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glider-js@1/glider.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
@@ -45,7 +45,7 @@
     </nav>
 
     <section id="donate">
-        <div class="container">
+        <div id="donationDiv" class="container">
 
 
             <!--<form action="" method="post">-->
@@ -121,7 +121,11 @@
 
 
         </div>
+        <div id="thanksDiv" class="container" style="display:none">
+            <h3 class="text-center">Thanks for your donation</h3>
+        </div>
     </section>
+
     <footer class="pt-4">
         <div class="container">
 
@@ -145,12 +149,13 @@
                 </div>
             </div>
 
-        </div>
-        <div class="text-center bg-light mt-2">
-            <span class="m-0 mt-2 copy-rights">Copyright �2022 Sanad</span>
-            <span class="m-0 copy-rights">All Rights Reserved</span>
+            <div class="text-center bg-light mt-2">
+                <span class="m-0 mt-2 copy-rights">Copyright ©2022 Katar Kherak</span>
+                <span class="m-0 copy-rights">All Rights Reserved</span>
+            </div>
         </div>
     </footer>
+
     <script src="https://cdn.jsdelivr.net/npm/glider-js@1/glider.min.js"></script>
     <script src="/lib/jquery/dist/jquery.min.js"></script>
     <script src="/assets/js/bootstarp.bundel.js"></script>
@@ -169,7 +174,7 @@
                 travelMode: 'DRIVING'
             });
             google.maps.event.addListener(map, 'click', function (event) {
-                alert("Latitude: " + event.latLng.lat() + " " + ", longitude: " + event.latLng.lng());
+                //alert("Latitude: " + event.latLng.lat() + " " + ", longitude: " + event.latLng.lng());
                 lat = event.latLng.lat();
                 lng = event.latLng.lng();
                 var myLatlng = new google.maps.LatLng(event.latLng.lat(), event.latLng.lng());
@@ -249,7 +254,8 @@
                     processData: false,
                     contentType: false,
                     success: function (res) {
-                        alert('success!!');
+                        $("#donationDiv").hide();
+                        $("#thanksDiv").show();
                     },
                     error: function (res) {
                         alert("error");
